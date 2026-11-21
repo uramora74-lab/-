@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+:root {
+  --bg-table: #12100d;
+  --bg-panel: #1b1713;
+  --bg-panel-raised: #241f19;
+  --border-brass: rgba(206, 165, 86, 0.28);
+  --border-brass-strong: rgba(218, 178, 96, 0.56);
+  --text-parchment: #f3ecde;
+  --text-muted: #b6aa96;
+  --accent-brass: #d4a64a;
+  --accent-crimson: #c7413b;
+  --accent-emerald: #3a9d68;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: "Manrope", system-ui, -apple-system, sans-serif;
+  background-color: var(--bg-table);
+  color: var(--text-parchment);
+}
+
+.font-display {
+  font-family: "Playfair Display", Georgia, serif;
+}
+
+.font-mono-num {
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Lightweight compositor-only transitions */
+.ui-transition {
+  transition: transform 150ms cubic-bezier(0.16, 1, 0.3, 1),
+    opacity 150ms cubic-bezier(0.16, 1, 0.3, 1),
+    background-color 140ms ease,
+    border-color 140ms ease;
+}
+
+/* Eco Mode for low-spec PCs: disable all transitions and SVG animations */
+.eco-mode *,
+.eco-mode *::before,
+.eco-mode *::after {
+  transition-duration: 0ms !important;
+  animation-duration: 0ms !important;
+  animation-iteration-count: 1 !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0ms !important;
+    animation-duration: 0ms !important;
+  }
+}
+
+/* Crisp custom scrollbars for optional diplomacy drawer */
+.war-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+
+.war-scroll::-webkit-scrollbar-track {
+  background: rgba(20, 16, 12, 0.6);
+}
+
+.war-scroll::-webkit-scrollbar-thumb {
+  background: rgba(206, 165, 86, 0.35);
+  border-radius: 3px;
+}

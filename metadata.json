@@ -1,0 +1,6 @@
+{
+  "name": "Межа Імперій",
+  "description": "Покрокова 2D стратегія з вибором нації, дипломатією та тактичними битвами, оптимізована для слабких ПК.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
